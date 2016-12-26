@@ -21,8 +21,8 @@
 </head>
 <style type="text/css">
     body {
-        /*background-color: #419641;*/
-        background-color: #${color};
+        background-color: #d9edf7;
+        <%--background-color: #${color};--%>
     }
 
 </style>
@@ -87,13 +87,13 @@
 <c:if test="${baseUser.role==1}">
     <div id="Layer1" align="center">
         <br><br>
-        <h4 style="color: #d9534f">首页主题:</h4>
-        <select id="color" name="color">
-            <option value="EEDDEE" <c:if test="${color=='EEDDEE'}">selected</c:if> >默认</option>
-            <option value="419641" <c:if test="${color=='419641'}">selected</c:if> >草绿</option>
-            <option value="f8d9ac" <c:if test="${color=='f8d9ac'}">selected</c:if> >鹅黄</option>
-        </select><br>
-        <a class="btn" href="###" onclick="updateColor()">确认</a>
+        <%--<h4 style="color: #d9534f">首页主题:</h4>--%>
+        <%--<select id="color" name="color">--%>
+            <%--<option value="EEDDEE" <c:if test="${color=='EEDDEE'}">selected</c:if> >默认</option>--%>
+            <%--<option value="419641" <c:if test="${color=='419641'}">selected</c:if> >草绿</option>--%>
+            <%--<option value="f8d9ac" <c:if test="${color=='f8d9ac'}">selected</c:if> >鹅黄</option>--%>
+        <%--</select><br>--%>
+        <%--<a class="btn" href="###" onclick="updateColor()">确认</a>--%>
         <br><br><br><br><br><br><br>
         <a id="user_center" href="userLists" title="用户管理"><h2>用户管理</h2>&nbsp;</a><br>
         <a id="logout" href="/main/logout" title="退出"><h2>退出</h2>&nbsp;</a>
@@ -115,31 +115,31 @@
                         <tr id="pic">
                             <td><a href="/main/detail?id=1"> <img style="border: 0px;" alt=""
                                                                   src="/static/picture/1.jpg"/><br>
-                                <h2 align="center">白玫瑰</h2></a></td>
+                                <h2 align="center">飞鸽</h2></a></td>
                             <td><a href="/main/detail?id=2"> <img style="border: 0px;" alt=""
                                                                   src="/static/picture/2.jpg"/><br>
-                                <h2 align="center">黑玫瑰</h2></a></td>
+                                <h2 align="center">凤凰</h2></a></td>
                             <td><a href="/main/detail?id=3"> <img style="border: 0px;" alt=""
                                                                   src="/static/picture/3.jpg"/><br>
-                                <h2 align="center">红玫瑰</h2></a></td>
+                                <h2 align="center">机器猫</h2></a></td>
                             <td><a href="/main/detail?id=1"> <img style="border: 0px;" alt=""
                                                                   src="/static/picture/1.jpg"/><br>
-                                <h2 align="center">白玫瑰</h2></a></td>
+                                <h2 align="center">飞鸽</h2></a></td>
                             <td><a href="/main/detail?id=2"> <img style="border: 0px;" alt=""
                                                                   src="/static/picture/2.jpg"/><br>
-                                <h2 align="center">黑玫瑰</h2></a></td>
+                                <h2 align="center">凤凰</h2></a></td>
                             <td><a href="/main/detail?id=3"> <img style="border: 0px;" alt=""
                                                                   src="/static/picture/3.jpg"/><br>
-                                <h2 align="center">红玫瑰</h2></a></td>
+                                <h2 align="center">机器猫</h2></a></td>
                             <td><a href="/main/detail?id=1"> <img style="border: 0px;" alt=""
                                                                   src="/static/picture/1.jpg"/><br>
-                                <h2 align="center">白玫瑰</h2></a></td>
+                                <h2 align="center">飞鸽</h2></a></td>
                             <td><a href="/main/detail?id=2"> <img style="border: 0px;" alt=""
                                                                   src="/static/picture/2.jpg"/><br>
-                                <h2 align="center">黑玫瑰</h2></a></td>
+                                <h2 align="center">凤凰</h2></a></td>
                             <td><a href="/main/detail?id=3"> <img style="border: 0px;" alt=""
                                                                   src="/static/picture/3.jpg"/><br>
-                                <h2 align="center">红玫瑰</h2></a></td>
+                                <h2 align="center">机器猫</h2></a></td>
                         </tr>
                     </table>
                 </td>
@@ -148,7 +148,7 @@
         </table>
     </div>
     <form action="/flowerSearch" method="post">
-        <input type="text" value="${search}" name="search" id="search" placeholder="搜索鲜花">
+        <input type="text" value="${search}" name="search" id="search" placeholder="搜索自行车">
         <input type="submit" value="搜索">
     </form>
     <table class="table table-bordered table-striped" align="center">

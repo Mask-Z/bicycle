@@ -66,10 +66,10 @@ public class LoginController {
 //        if(request.getAttribute("msg")!=null&&request.getAttribute("msg")!=""){
 //            request.setAttribute("msg", request.getAttribute("msg"));
 //        }
-        Properties properties=PropertiesUtils.loadProps("D:\\WorkSpace\\roseonly\\src\\main\\resources\\color.properties");
-        String color=properties.getProperty("color");
-        request.getSession().setAttribute("color",color);
-        out("####:  "+color);
+//        Properties properties=PropertiesUtils.loadProps("D:\\WorkSpace\\roseonly\\src\\main\\resources\\color.properties");
+//        String color=properties.getProperty("color");
+//        request.getSession().setAttribute("color",color);
+//        out("####:  "+color);
         List<Flower> flowerList=flowerDao.findAll();
         modelMap.addAttribute("flowerList",flowerList);
         return "home";
