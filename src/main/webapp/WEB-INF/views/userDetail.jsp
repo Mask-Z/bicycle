@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>RoseOnly 用户详情</h1>
+    <h1>用户详情</h1>
     <hr/>
 
     <table class="table table-bordered table-striped">

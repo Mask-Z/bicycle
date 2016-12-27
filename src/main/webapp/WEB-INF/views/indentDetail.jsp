@@ -42,20 +42,20 @@
                     <th>实付款</th>
                     <td>${indent.totalMoney}</td>
                 </tr>
-                <tr>
-                    <th>地址</th>
-                    <td>${indent.address}</td>
-                </tr>
+                <%--<tr>--%>
+                    <%--<th>地址</th>--%>
+                    <%--<td>${indent.address}</td>--%>
+                <%--</tr>--%>
                 <tr>
                     <th>交易日期</th>
                     <td>${indent.payDate}</td>
                 </tr>
-                <tr>
-                    <th>配送方式</th>
-                    <td>
-                        <c:if test="${indent.postStyle==1}">顺丰快递</c:if>
-                        <c:if test="${indent.postStyle==2}">天天快递</c:if>
-                    </td>
+                <%--<tr>--%>
+                    <%--<th>配送方式</th>--%>
+                    <%--<td>--%>
+                        <%--<c:if test="${indent.postStyle==1}">顺丰快递</c:if>--%>
+                        <%--<c:if test="${indent.postStyle==2}">天天快递</c:if>--%>
+                    <%--</td>--%>
                 </tr>
                 <tr>
                     <th>支付方式</th>

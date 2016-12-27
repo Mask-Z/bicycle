@@ -96,6 +96,7 @@
         <%--<a class="btn" href="###" onclick="updateColor()">确认</a>--%>
         <br><br><br><br><br><br><br>
         <a id="user_center" href="userLists" title="用户管理"><h2>用户管理</h2>&nbsp;</a><br>
+        <a id="goods_center" href="goodsLists" title="商品管理"><h2>商品管理</h2>&nbsp;</a><br>
         <a id="logout" href="/main/logout" title="退出"><h2>退出</h2>&nbsp;</a>
             <%--<img src="/static/picture/bgm.jpg" height="100%" width="100%"/>--%>
     </div>

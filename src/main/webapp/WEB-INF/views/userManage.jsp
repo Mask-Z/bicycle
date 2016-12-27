@@ -25,7 +25,7 @@
 <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <body>
 <div class="container">
-<h1>RoseOnly-用户详情</h1>
+<h1>用户详情</h1>
 <hr/>
 
 <%--<h3>所有用户 <a href="/addUser" type="button" class="btn btn-default btn-sm">添加</a></h3>--%>
