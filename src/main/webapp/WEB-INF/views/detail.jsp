@@ -21,7 +21,7 @@
 <body>
 <script src="/static/js/jquery-1.9.1.min.js"></script>
 <!-- 引入头部导航 -->
-<jsp:include flush="true" page="header.jsp"></jsp:include>
+<%--<jsp:include flush="true" page="header.jsp"></jsp:include>--%>
 <a onclick="javscript: window.history.go(-1)" style="cursor: hand;" href="###">返回</a><br/>
 <h4 align="center"> 商品详情</h4>
 

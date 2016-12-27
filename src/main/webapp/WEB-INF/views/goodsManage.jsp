@@ -45,7 +45,7 @@
         <!-- 如果用户列表非空 -->
         <c:if test="${!empty goodsList}">
             <p class="bg-warning">
-             <a href="/addBicycle" type="button" class="btn btn-default btn-sm">添加商品</a>
+             <a href="/addGood" type="button" class="btn btn-default btn-sm">添加商品</a>
             </p>
             <table class="table table-bordered table-striped">
                 <tr>
