@@ -45,18 +45,18 @@ public class IndentController {
 	 * @return
 	 */
 	@RequestMapping(value = "saveIndent", method = RequestMethod.POST)
-	public String saveIndent(String address, Integer postStyle, Integer payStyle, Double totalMoney, String dealDetails, HttpServletRequest request) {
+	public String saveIndent(  Integer payStyle, Double totalMoney, String dealDetails, HttpServletRequest request) {
 		out("saveIndent...");
-		out("address..." + address);
+
 		Indent indent = new Indent();
-		indent.setAddress(address);
+
 		indent.setDealDetails(dealDetails);
 		indent.setPayDate(new Date());
-		indent.setPostStyle(postStyle);
+
 		indent.setPayStyle(payStyle);
 		indent.setTotalMoney(totalMoney);
 		indent.setUserByUserId((User) request.getSession().getAttribute("baseUser"));
-		indent.setState(1);//设置订单初始状态为1,代表为出库
+		indent.setState(1);//设置订单初始状态为1,代表未出库
 		indentDao.saveAndFlush(indent);
 		//移除购物车信息
 		User user = (User) request.getSession().getAttribute("baseUser");

@@ -40,23 +40,23 @@
                    value="${count}" onfocus="this.blur()"/>
         </div>
 
-        <div class="form-group">
-            <label for="address">送货地址:</label>
-            <input type="text" class="form-control" id="address" name="address"
-                   value="${baseUser.city}"/>
-        </div>
+        <%--<div class="form-group">--%>
+            <%--<label for="address">送货地址:</label>--%>
+            <%--<input type="text" class="form-control" id="address" name="address"--%>
+                   <%--value="${baseUser.city}"/>--%>
+        <%--</div>--%>
         <div class="form-group">
             <label for="mobile">联系方式:</label>
             <input type="text" class="form-control" id="mobile" name="mobile"
                    value="${baseUser.number}"/>
         </div>
-        <div class="form-group">
-            <label for="postStyle">配送方式:</label>
-            <select class="form-select-button" id="postStyle" name="postStyle">
-                <option value="1">顺丰快递</option>
-                <option value="2">天天快递</option>
-            </select>
-        </div>
+        <%--<div class="form-group">--%>
+            <%--<label for="postStyle">配送方式:</label>--%>
+            <%--<select class="form-select-button" id="postStyle" name="postStyle">--%>
+                <%--<option value="1">顺丰快递</option>--%>
+                <%--<option value="2">天天快递</option>--%>
+            <%--</select>--%>
+        <%--</div>--%>
 
         <div class="form-group">
             <label for="payStyle">付款方式:</label>

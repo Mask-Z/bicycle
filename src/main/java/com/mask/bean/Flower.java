@@ -14,6 +14,7 @@ public class Flower {
 	private Cart cartByCartId;
 	private Collection<Indent> indentsById;
 	private int id;
+    private Double foregift;
 
 	@Basic
 	@Column(name = "amount", nullable = true)
@@ -95,4 +96,14 @@ public class Flower {
 	public void setId(int id) {
 		this.id = id;
 	}
+
+    @Basic
+    @Column(name = "foregift", nullable = true, precision = 0)
+    public Double getForegift() {
+        return foregift;
+    }
+
+    public void setForegift(Double foregift) {
+        this.foregift = foregift;
+    }
 }

@@ -154,7 +154,7 @@
     <table class="table table-bordered table-striped" align="center">
         <tr>
             <th>名称</th>
-            <th>价格</th>
+            <th>价格(元/天)</th>
             <th>数量</th>
 
         </tr>

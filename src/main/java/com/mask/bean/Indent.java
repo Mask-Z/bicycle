@@ -1,6 +1,7 @@
 package com.mask.bean;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -16,9 +17,13 @@ public class Indent {
 	private Integer payStyle;
 	private Integer payState;
 	private Date payDate;
-	private User userByUserId;
+    private User userByUserId;
 	private Flower flowerByFlowerId;
 	private int id;
+
+    public void setPayDate(Timestamp payDate) {
+        this.payDate = payDate;
+    }
 
 	public void setPayDate(java.sql.Date payDate) {
 		this.payDate = payDate;
@@ -45,7 +50,7 @@ public class Indent {
 	}
 
 	@Basic
-	@Column(name = " total_money", nullable = true, precision = 0)
+	@Column(name = "total_money", nullable = true, precision = 0)
 	public Double getTotalMoney() {
 		return totalMoney;
 	}

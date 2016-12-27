@@ -1,6 +1,7 @@
 package com.mask.bean;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.Date;
 
@@ -12,9 +13,13 @@ public class Cart {
 	private String goods;
 	private Integer amount;
 	private Date addtime;
-	private User userByUserId;
+    private User userByUserId;
 	private Collection<Flower> flowersById;
 	private int id;
+
+    public void setAddtime(Timestamp addtime) {
+        this.addtime = addtime;
+    }
 
 	public void setAddtime(java.sql.Date addtime) {
 		this.addtime = addtime;

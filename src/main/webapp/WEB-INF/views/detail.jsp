@@ -27,7 +27,8 @@
 
 <ul align="center"><img src="/static/picture/${flower.id}.jpg" /></ul>
 <ul>商品名称: ${flower.name}</ul>
-<ul> 价 格 : ${flower.price}</ul>
+<ul>押金: ${flower.foregift}</ul>
+<ul>价格(元/天) : ${flower.price}</ul>
 <ul>剩余数量: ${flower.amount}</ul>
 <%--提交实体类报错400--%>
 <form action="/main/paying" method="post">
@@ -40,7 +41,7 @@
     <input id="amount" name="amount"  type="text" value="0"/>
     <input id="add" name="add" type="button" value="+"/>
     <p>总价：<label id="total"></label></p>
-    <br> <input type="submit" id="sub" name="sub" value="直接购买"/>
+    <br> <input type="submit" id="sub" name="sub" value="直接租赁"/>
     <br> <input type="button" value="加入购物车" id="addCart" name="addCart" onclick="addToCart()">
 </form>
 <a href="/main/dealCart"><button>去购物车结算</button></a>
