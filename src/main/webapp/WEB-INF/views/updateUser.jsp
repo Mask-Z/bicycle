@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>RoseOnly修改用户信息</h1>
+    <h1>修改用户信息</h1>
     <hr/>
 
     <form action="/users/updateP" method="post">

@@ -22,7 +22,7 @@
 <style type="text/css">
     body {
         background-color: #d9edf7;
-        <%--background-color: #${color};--%>
+    <%--background-color: #${color};--%>
     }
 
 </style>
@@ -35,7 +35,8 @@
 <script src=""></script>
 <script>
     function showMsg() {
-        var msg = '<%=request.getAttribute("msg")%>';
+        var msg = '<%=request.getSession().getAttribute("msg")%>';
+        <%request.getSession().removeAttribute("msg");%>
         if (msg != null && msg != 'null' && msg != '') {
             alert(msg);
         }
@@ -58,42 +59,42 @@
     }
 </style>
 <script>
-   function updateColor() {
+    function updateColor() {
 //       var color = $("#color").val();
 ////       var name = document.getElementById("color").value.trim();
 //       var formData = new Object();
 //           formData["color"] =color;
 
-       var url="/updateColor";
+        var url = "/updateColor";
 //       alert(url);
-       $.ajax({
-           async: false,
-           cache: false,
-           type: 'POST',
-           url: url,// 请求的action路径
-           data:"color="+$("#color").val(),
-           error: function () {// 请求失败处理函数
-               alert("修改失败!!");
-           },
-           success: function (data) {
-               alert("修改主题成功!");
+        $.ajax({
+            async: false,
+            cache: false,
+            type: 'POST',
+            url: url,// 请求的action路径
+            data: "color=" + $("#color").val(),
+            error: function () {// 请求失败处理函数
+                alert("修改失败!!");
+            },
+            success: function (data) {
+                alert("修改主题成功!");
 
-           }
-       });
-   }
+            }
+        });
+    }
 </script>
 <body onload="showMsg()">
 
 <c:if test="${baseUser.role==1}">
     <div id="Layer1" align="center">
         <br><br>
-        <%--<h4 style="color: #d9534f">首页主题:</h4>--%>
-        <%--<select id="color" name="color">--%>
+            <%--<h4 style="color: #d9534f">首页主题:</h4>--%>
+            <%--<select id="color" name="color">--%>
             <%--<option value="EEDDEE" <c:if test="${color=='EEDDEE'}">selected</c:if> >默认</option>--%>
             <%--<option value="419641" <c:if test="${color=='419641'}">selected</c:if> >草绿</option>--%>
             <%--<option value="f8d9ac" <c:if test="${color=='f8d9ac'}">selected</c:if> >鹅黄</option>--%>
-        <%--</select><br>--%>
-        <%--<a class="btn" href="###" onclick="updateColor()">确认</a>--%>
+            <%--</select><br>--%>
+            <%--<a class="btn" href="###" onclick="updateColor()">确认</a>--%>
         <br><br><br><br><br><br><br>
         <a id="user_center" href="userLists" title="用户管理"><h2>用户管理</h2>&nbsp;</a><br>
         <a id="goods_center" href="goodsLists" title="商品管理"><h2>商品管理</h2>&nbsp;</a><br>

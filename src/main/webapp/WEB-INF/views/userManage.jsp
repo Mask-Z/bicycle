@@ -24,6 +24,7 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <body>
+<a style="cursor: hand;" href="sysLogin">返回首页</a><br/>
 <div class="container">
 <h1>用户详情</h1>
 <hr/>

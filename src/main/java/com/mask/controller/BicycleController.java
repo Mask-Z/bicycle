@@ -113,9 +113,9 @@ public class BicycleController {
     /**
      * 图片文件上传
      */
-    @ResponseBody
+//    @ResponseBody
     @RequestMapping(value = "/photoUpload",method = RequestMethod.POST)
-    public String photoUpload(MultipartFile file, HttpServletRequest request, HttpServletResponse response, HttpSession session) throws IllegalStateException, IOException {
+    public String  photoUpload(MultipartFile file, HttpServletRequest request, HttpServletResponse response, HttpSession session) throws IllegalStateException, IOException {
 
         if (file!=null) {// 判断上传的文件是否为空
             String path=null;// 文件路径
@@ -128,8 +128,10 @@ public class BicycleController {
 //                if ("GIF".equals(type.toUpperCase())||"PNG".equals(type.toUpperCase())||"JPG".equals(type.toUpperCase())) {
                 if ("JPG".equals(type.toUpperCase())) {
                     // 项目在容器中实际发布运行的根路径
-                    String realPath=request.getSession().getServletContext().getRealPath("/")+"static\\picture\\";
-//                    String realPath2=request.getSession().getServletContext().getContextPath();
+//                    String realPath=request.getSession().getServletContext().getRealPath("/")+"static\\picture\\";
+                    //先用绝对路径
+                    String realPath="F:\\MyData\\bicycle\\src\\main\\webapp\\static\\picture\\";
+
                     out(realPath+"  :  ");
                     List<Flower> flowerList=flowerDao.findAll();
                     Integer id=0;
@@ -146,18 +148,26 @@ public class BicycleController {
                     // 转存文件到指定的路径
                     file.transferTo(new File(path));
                     System.out.println("文件成功上传到指定目录下");
-                    return "文件成功上传到指定目录下";
+                    request.setAttribute("PicMsg","文件上传成功!");
+                    return "addGood";
+//                    return "文件成功上传到指定目录下";
                 }else {
                     System.out.println("不是我们想要的文件类型,请按要求重新上传");
-                    return "不是我们想要的文件类型,请按要求重新上传";
+                    request.setAttribute("PicMsg","不是我们想要的文件类型,请按要求重新上传");
+                    return "addGood";
+//                    return "不是我们想要的文件类型,请按要求重新上传";
                 }
             }else {
                 System.out.println("文件类型为空");
-                return "文件类型为空";
+                request.setAttribute("PicMsg","文件类型为空");
+                return "addGood";
+//                return "文件类型为空";
             }
         }else {
             System.out.println("没有找到相对应的文件");
-            return "没有找到相对应的文件";
+            request.setAttribute("PicMsg","没有找到相对应的文件");
+            return "addGood";
+//            return "没有找到相对应的文件";
         }
     }
 }

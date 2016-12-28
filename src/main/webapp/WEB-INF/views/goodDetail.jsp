@@ -15,7 +15,7 @@
 <div class="container">
     <h1>商品详情</h1>
     <hr/>
-
+    <ul align="center"><img src="/static/picture/${good.id}.jpg" /></ul>
     <table class="table table-bordered table-striped">
         <tr>
             <th>ID</th>
