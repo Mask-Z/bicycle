@@ -8,6 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="base.jsp"%>
+<%@ page isELIgnored="false" %>
 <html>
 <head>
     <title>用户详情</title>

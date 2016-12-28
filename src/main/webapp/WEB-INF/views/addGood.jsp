@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="base.jsp" %>
+<%@ page isELIgnored="false" %>
 <html>
 <head>
     <title>商品添加</title>
