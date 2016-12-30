@@ -8,6 +8,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by Mr丶周 on 2016/12/6.
  */
@@ -31,9 +33,9 @@ public interface UserDaoI extends JpaRepository<User, Integer> {
 	@Query("select u.id from User u where u.name=:qname")
 	public int  findIdByName(@Param("qname") String name);
 
-	/**
-	 * 根据用户名查询实体类
-	 */
-//	@Query("select User from User u where u.name=:qname")
-//	public User  findUserByName(@Param("qname") String name);
+//	/**
+//	 * 根据用户名查询实体类
+//	 */
+//	@Query("select List<User> from User limit 10,10")
+//	public List<User>  findUserListByPage(@Param("qname") String name);
 }
