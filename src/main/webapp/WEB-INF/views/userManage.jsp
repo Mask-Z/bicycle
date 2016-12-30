@@ -65,6 +65,15 @@
                 </td>
             </tr>
         </c:forEach>
+        <tr>
+            <c:if test="${currentPage!=1}">
+            <td align="left"> <a href="userLists?page=${currentPage-1}" type="button" class="btn btn-sm btn-success">上一页</a></td>
+            </c:if>
+            <td align="center" colspan="8">${bar}</td>
+            <c:if test="${currentPage!=endPage}">
+            <td align="left"> <a href="userLists?page=${currentPage+1}" type="button" class="btn btn-sm btn-success">下一页</a></td>
+            </c:if>
+        </tr>
     </c:if>
     <c:if test="${sessionScope.baseUser.role==0}">
         <tr>
