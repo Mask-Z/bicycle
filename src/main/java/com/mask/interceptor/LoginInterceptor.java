@@ -24,19 +24,22 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response, Object handler) throws Exception {
-        logger.info("欢迎来到RoseOnly!");
+//        logger.info("欢迎来到RoseOnly!");
+        out("欢迎来到自行车租赁系统!");
         String uri = request.getRequestURI();
+        out("URI: "+uri);
         for (String url : excludedUrls) {
             if (uri.endsWith(url)) {
                 return true;
             }
         }
         HttpSession session = request.getSession();
+        out("BaseUser: "+session.getAttribute("baseUser").toString());
         if (null != session.getAttribute("baseUser")) {
             return true;
         } else {
-            out("进入loginInterceptor........");
-            throw new WebAuthException();
+            out("进入Exception........");
+            throw new Exception();
         }
     }
 }

@@ -39,29 +39,32 @@
         <property name="maxUploadSize" value="10240000" />
     </bean>
     <!--配置拦截器-->
-    <!--<mvc:interceptors>-->
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/*"/>-->
-            <!--<bean id="loginInterceptor" class="com.mask.interceptor.LoginInterceptor">-->
-                <!--<property name="excludeUrls">-->
-                    <!--<list>-->
-                        <!--<value>/index</value>-->
-                        <!--<value>/login</value>-->
-                        <!--<value>/register</value>-->
-                    <!--</list>-->
-
-                <!--</property>-->
-            <!--</bean>-->
-        <!--</mvc:interceptor>-->
-    <!--</mvc:interceptors>-->
+    <mvc:interceptors>
+    <mvc:interceptor>
+    <mvc:mapping path="/*"/>
+    <bean id="loginInterceptor" class="com.mask.interceptor.LoginInterceptor">
+    <property name="excludeUrls">
+    <list>
+    <value>/index</value>
+    <value>/login</value>
+    <value>/register</value>
+    <value>/checkUser</value>
+    <value>/addUser</value>
+    <value>/checkName</value>
+    </list>
+    </property>
+    </bean>
+    </mvc:interceptor>
+    </mvc:interceptors>
+    <!--拦截到指定页面-->
     <!--<bean id="handlerExceptionResolver"-->
-          <!--class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
-        <!--<property name="exceptionMappings">-->
-            <!--<props>-->
-                <!--&lt;!&ndash;redirect:/index&ndash;&gt;-->
-                <!--<prop key="com.mask.exception.WebAuthException">login</prop>-->
-            <!--</props>-->
-        <!--</property>-->
+    <!--class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+    <!--<property name="exceptionMappings">-->
+    <!--<props>-->
+    <!--&lt;!&ndash;redirect:/index&ndash;&gt;-->
+    <!--<prop key="com.mask.exception.WebAuthException">login</prop>-->
+    <!--</props>-->
+    <!--</property>-->
     <!--</bean>-->
     <!-- 表示JPA Repository所在的包 -->
     <jpa:repositories base-package="com.mask.dao"/>
