@@ -130,8 +130,8 @@ public class BicycleController {
                     // 项目在容器中实际发布运行的根路径
 //                    String realPath=request.getSession().getServletContext().getRealPath("/")+"static\\picture\\";
                     //先用绝对路径
-                    String realPath="F:\\MyData\\bicycle\\src\\main\\webapp\\static\\picture\\";
-//                    String realPath="D:\\WorkSpace\\WebMagic\\bicycle\\src\\main\\webapp\\static\\picture\\";
+//                    String realPath="F:\\MyData\\bicycle\\src\\main\\webapp\\static\\picture\\";
+                    String realPath="D:\\WorkSpace\\WebMagic\\bicycle\\src\\main\\webapp\\static\\picture\\";
 
                     out(realPath+"  :  ");
                     List<Flower> flowerList=flowerDao.findAll();

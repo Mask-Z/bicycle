@@ -25,26 +25,30 @@
 <a style="cursor: hand;" href="/sysLogin">返回</a><br/>
 <h4 align="center"> 商品详情</h4>
 
-<ul align="center"><img src="/static/picture/${flower.id}.jpg" /></ul>
+<ul align="center"><img src="/static/picture/${flower.id}.jpg"/></ul>
 <ul>商品名称: ${flower.name}</ul>
 <ul>押金: ${flower.foregift}</ul>
 <ul>价格(元/天) : ${flower.price}</ul>
-<ul>剩余数量: ${flower.amount}</ul>
-<%--提交实体类报错400--%>
-<form action="/main/paying" method="post">
-    <input type="hidden" value="${baseUser.id}" id="userByUserId" name="userByUserId"/>
-    <input type="hidden" value="${flower.id}" id="flowerByFlowerId" name="flowerByFlowerId">
-    <input type="hidden" value="${flower.price}" id="price" name="price">
-    <input type="hidden" value="${flower.name}" id="name" name="name">
-    <input type="hidden" value="${flowerList.get(0).name}" id="flowerP" name="flowerP">
-    <input id="min" name="min" type="button" value="-"/>
-    <input id="amount" name="amount"  type="text" value="0"/>
-    <input id="add" name="add" type="button" value="+"/>
-    <p>总价：<label id="total"></label></p>
-    <br> <input type="submit" id="sub" name="sub" value="直接租赁"/>
-    <br> <input type="button" value="加入购物车" id="addCart" name="addCart" onclick="addToCart()">
-</form>
-<a href="/main/dealCart"><button>去购物车结算</button></a>
+<c:if test="${flower.amount<=0}"><p>对不起,货源不足</p></c:if>
+<c:if test="${flower.amount>0}">
+    <ul>剩余数量: ${flower.amount}</ul>
+    <%--提交实体类报错400--%>
+    <form action="/main/paying" method="post">
+        <input type="hidden" value="${baseUser.id}" id="userByUserId" name="userByUserId"/>
+        <input type="hidden" value="${flower.id}" id="flowerByFlowerId" name="flowerByFlowerId">
+        <input type="hidden" value="${flower.price}" id="price" name="price">
+        <input type="hidden" value="${flower.name}" id="name" name="name">
+        <input type="hidden" value="${flowerList.get(0).name}" id="flowerP" name="flowerP">
+        <input id="min" name="min" type="button" value="-"/>
+        <input id="amount" name="amount" type="text" value="0"/>
+        <input id="add" name="add" type="button" value="+"/>
+        <p>总价：<label id="total"></label></p>
+        <br> <input type="submit" id="sub" name="sub" value="直接租赁"/>
+        <br> <input type="button" value="加入购物车" id="addCart" name="addCart" onclick="addToCart()">
+    </form>
+    <a href="/main/dealCart">
+        <button>去购物车结算</button>
+    </a></c:if>
 <script>
     $(function () {
         var t = $("#amount");
@@ -65,10 +69,10 @@
 </script>
 <script type="text/javascript">
     function addToCart() {
-        if ($.trim($("#amount").val())== '0') {
+        if ($.trim($("#amount").val()) == '0') {
             alert("数量为0,不能加入购物车");
             return false;
-        }else{
+        } else {
             var formData = new Object();
             var data = $(":input").each(function () {
                 formData[this.name] = $("#" + this.name).val();
