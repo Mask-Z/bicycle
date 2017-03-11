@@ -8,8 +8,8 @@
 
 # Demo截图
 
-![](/static/show/login.PNG)
-![](/static/show/main.PNG)
-![](/static/show/managerShop.PNG)
-![](/static/show/managerUser.PNG)
-![](/static/show/shopDetail.PNG)
+![](https://github.com/Mask-Z/bicycle/blob/master/src/main/webapp/static/show/login.PNG)
+![](https://github.com/Mask-Z/bicycle/blob/master/src/main/webapp/static/show/main.PNG)
+![](https://github.com/Mask-Z/bicycle/blob/master/src/main/webapp/static/show/managerShop.PNG)
+![](https://github.com/Mask-Z/bicycle/blob/master/src/main/webapp/static/show/managerUser.PNG)
+![](https://github.com/Mask-Z/bicycle/blob/master/src/main/webapp/static/show/shopDetail.PNG)
